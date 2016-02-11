@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.theblackproject</groupId>
@@ -106,9 +107,21 @@
 		</plugins>
 	</build>
 
+	<url>https://github.com/Leviter/sonar-slack-plugin</url>
+
 	<organization>
 		<name>The Black Project</name>
 		<url>http://www.theblackproject.org/</url>
 	</organization>
 
+	<issueManagement>
+		<url>https://github.com/Leviter/sonar-slack-plugin/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+
+	<scm>
+		<url>https://github.com/Leviter/sonar-slack-plugin</url>
+		<connection>scm:git:git://github.com/Leviter/sonar-slack-plugin.git</connection>
+		<developerConnection>scm:git:git@github.com/Leviter/sonar-slack-plugin.git</developerConnection>
+	</scm>
 </project>
