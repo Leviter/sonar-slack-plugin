@@ -114,6 +114,14 @@
 		<url>http://www.theblackproject.org/</url>
 	</organization>
 
+	<licenses>
+		<license>
+			<name>GNU LGPL 3</name>
+			<url>https://opensource.org/licenses/gpl-3.0.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
 	<issueManagement>
 		<url>https://github.com/Leviter/sonar-slack-plugin/issues</url>
 		<system>GitHub Issues</system>
