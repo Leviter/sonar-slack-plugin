@@ -18,3 +18,9 @@ The following properties can be modified in the SonarQube (Configuration -> Gene
   
 The message being sent contains information about the project and per severity the amount of issues (and what has
 changed since the previous analysis in 'new' and 'resolved' amounts).
+
+## Usage ##
+This plugin works only when Sonar analysis is run in 'issues' mode. So an example on how to use this with Java is
+by executing it as follows:
+
+`mvn sonar:sonar -Dsonar.analysis.mode=issues`

@@ -22,15 +22,8 @@ final class SlackMessageBuilder implements MessageBuilder {
 
 	@Override
 	public String getMessage() {
-
-		for(Issue issue : projectIssues.issues()) {
-			System.out.println("* " + issue.toString());
-		}
-
 		List<Issue> issues = newArrayList(projectIssues.issues());
 		List<Issue> issuesResolved = newArrayList(projectIssues.resolvedIssues());
-
-		System.out.println("Issues = " + issues.size() + " - Resolved = " + issuesResolved.size());
 
 		Map<String, SeverityCount> severityCountMap = new HashMap<>();
 

@@ -6,7 +6,7 @@
 	<groupId>org.theblackproject</groupId>
 	<artifactId>sonar-slack-plugin</artifactId>
 	<packaging>sonar-plugin</packaging>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 
 	<name>Slack Plugin</name>
 	<description>Plugin for sending analysis results to Slack</description>
