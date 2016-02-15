@@ -1,10 +1,12 @@
 package org.theblackproject.sonar.slack;
 
+import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import lombok.AllArgsConstructor;
 import org.sonar.api.issue.Issue;
 import org.sonar.api.issue.ProjectIssues;
 import org.sonar.api.resources.Project;
+import org.sonar.api.rule.Severity;
 import org.theblackproject.sonar.slack.domain.Message;
 import org.theblackproject.sonar.slack.domain.SeverityCount;
 
@@ -37,9 +39,13 @@ final class SlackMessageBuilder implements MessageBuilder {
 			result.append("No issues found! Job well done!\n");
 		} else {
 			message = "%s: %d (+%d / -%d)\n";
-			for (Map.Entry<String, SeverityCount> entry : severityCountMap.entrySet()) {
-				SeverityCount count = entry.getValue();
-				result.append(format(message, entry.getKey(), count.getTotalCount(), count.getNewCount(), count.getResolvedCount()));
+
+			List<String> decreasingSeverities = Lists.reverse(Severity.ALL);
+			for (String severity : decreasingSeverities) {
+				SeverityCount count = severityCountMap.get(severity);
+				if (count != null) {
+					result.append(format(message, severity, count.getTotalCount(), count.getNewCount(), count.getResolvedCount()));
+				}
 			}
 		}
 
