@@ -1,3 +1,5 @@
+[![CodeQL](https://github.com/Leviter/sonar-slack-plugin/workflows/CodeQL/badge.svg)](https://github.com/starnowski/posmulten/actions?query=workflow%3ACodeQL)
+
 # sonar-slack-plugin
 A sonar plugin to send notifications to a Slack channel.
 
